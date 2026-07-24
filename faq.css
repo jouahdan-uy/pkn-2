@@ -1,0 +1,201 @@
+/* ===========================
+   Google Font
+=========================== */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+/* ===========================
+   Reset
+=========================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Plus Jakarta Sans',sans-serif;
+    background:#f8f5f1;
+    color:#3a2a22;
+    line-height:1.8;
+}
+
+/* ===========================
+   Header
+=========================== */
+
+header{
+    background:linear-gradient(rgba(36,22,12,.75),rgba(36,22,12,.75)),
+    url("./media/hero.jpg") center/cover;
+
+    color:white;
+    text-align:center;
+    padding:90px 20px;
+}
+
+header h1{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+header p{
+    max-width:650px;
+    margin:auto;
+    font-size:1.1rem;
+    color:#f5f5f5;
+}
+
+/* ===========================
+   Main
+=========================== */
+
+main{
+    width:90%;
+    max-width:900px;
+    margin:70px auto;
+}
+
+/* ===========================
+   FAQ Card
+=========================== */
+
+article{
+    margin-bottom:18px;
+}
+
+details{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+details:hover{
+    transform:translateY(-3px);
+    box-shadow:0 12px 35px rgba(0,0,0,.12);
+}
+
+summary{
+    list-style:none;
+    cursor:pointer;
+    padding:22px 60px 22px 25px;
+    font-size:1.05rem;
+    font-weight:700;
+    position:relative;
+    transition:.3s;
+}
+
+summary::-webkit-details-marker{
+    display:none;
+}
+
+/* Ikon + */
+
+summary::after{
+    content:"+";
+    position:absolute;
+    right:25px;
+    top:50%;
+    transform:translateY(-50%);
+    font-size:2rem;
+    color:#8b5e34;
+    transition:.3s;
+}
+
+/* Ikon - */
+
+details[open] summary::after{
+    content:"−";
+}
+
+details[open] summary{
+    background:#8b5e34;
+    color:white;
+}
+
+details p{
+    padding:25px;
+    background:#fffaf5;
+    color:#555;
+    animation:fade .35s ease;
+}
+
+/* ===========================
+   Footer
+=========================== */
+
+footer{
+    text-align:center;
+    padding:35px;
+    background:#2b1d16;
+    color:white;
+    margin-top:70px;
+}
+
+/* ===========================
+   Animation
+=========================== */
+
+@keyframes fade{
+
+    from{
+        opacity:0;
+        transform:translateY(-10px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:768px){
+
+    header{
+        padding:70px 20px;
+    }
+
+    header h1{
+        font-size:2.2rem;
+    }
+
+    header p{
+        font-size:1rem;
+    }
+
+    summary{
+        font-size:1rem;
+        padding:18px 50px 18px 20px;
+    }
+
+    details p{
+        padding:20px;
+        font-size:.95rem;
+    }
+
+}
+
+@media(max-width:480px){
+
+    header h1{
+        font-size:1.8rem;
+    }
+
+    main{
+        width:95%;
+    }
+
+    summary{
+        font-size:.95rem;
+    }
+
+}
